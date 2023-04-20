@@ -40,7 +40,6 @@ public class MainPage {
     @FindBy (xpath = "/html/body/section[1]/div/div/div/h1")
     private WebElement becomeTester;
 
-
     @FindBy(xpath = "//*[@id=\"instructors\"]/div/h2")
     private WebElement instructors;
 
@@ -67,6 +66,10 @@ public class MainPage {
 
     public void writeEmailToEmailField (String email) {
         this.emailField.sendKeys(email);
+    }
+
+    public WebElement getToEmailField() {
+        return this.emailField;
     }
 
     public void clickOnReadMoreButtonVirtual() {
@@ -106,7 +109,7 @@ public class MainPage {
     }
 
     public String getToBecomeTester() {
-        return 
+        return this.becomeTester.getText();
     }
 
 
